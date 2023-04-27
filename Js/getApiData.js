@@ -5,8 +5,7 @@ const getFrankfuterData = async (host) => {
         const currencies = await rawData.json();
         const currenciesKeys = Object.keys(currencies);
         const currencieValues = Object.values(currencies);
-        const arrayOfCurrencies = [[...currencies],currencieValues,currenciesKeys];
-        return arrayOfCurrencies;
+        console.log(currenciesKeys)
     }catch{
         console.log("Error")
     };
