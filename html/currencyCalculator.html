@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Foreign Exchange</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="../Js/currencyCalculator.js"></script>
+    </head>
+    <body>
+        <header id="fixed">
+            <div id="headerContainer">
+                <a href="index.html"><h1 id="tittle">Foreign Exchange</h1></a>
+            </div>
+            <nav>
+                <p class="navbar">
+                    <a id="nav1" class="currentPage navs" href="../index.html">Home</a>
+                    <a id="nav2" class="navs" href="currencyCalculator.html">Calculator</a>
+                    <a id="nav3" class="navs" href="contact.html">Contact</a>
+                </p>
+            </nav>
+        </header>
+        <div id="content">
+            <div id="number">
+                <label for="moneyNumber">Money to convert</label>
+                <input type="number" name="moneyNumber" id="moneyNumber" required min="0">
+            </div>
+            <div id="firstDropdown">
+                <label for="firstCurrency">Select the first Foreign Currency</label>
+                <select id="firstCurrency" name="firstCurrency">
+                </select>
+            </div>
+            <div id="secondDropdown">
+                <label for="secondCurrency">Select the second Foreign Currency</label>
+                <select id="secondCurrency" name="secondCurrency">
+                </select>
+            </div>
+            <button id="convertButton">Convert</button>
+        </div>
+        <h2 id="text">a</h2>
+        <footer>
+
+        </footer>
+    </body>
+</html>
