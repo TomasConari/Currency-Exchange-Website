@@ -26,14 +26,18 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     };
     const convertButton = document.getElementById("convertButton");
     convertButton.addEventListener("click", async () => {
-        const firstToCompare = firstCurrency.value;
-        const secondToCompare = secondCurrency.value;
-        const numberOfComparation = document.getElementById("moneyNumber").value;
-        const allConversionInfoRaw = await fetch(`https://${frankfurterUrl}/latest?amount=${numberOfComparation}&from=${firstToCompare}&to=${secondToCompare}`);
-        const allConversionInfo = await allConversionInfoRaw.json();
-        const filteredCurrencyAndNumber = await allConversionInfo.rates;
-        const convertedNumber = await filteredCurrencyAndNumber[secondToCompare];
-        const text = document.getElementById("text");
-        text.innerHTML = convertedNumber;
+        try{
+            const firstToCompare = firstCurrency.value;
+            const secondToCompare = secondCurrency.value;
+            const numberOfComparation = document.getElementById("moneyNumber").value;
+            const allConversionInfoRaw = await fetch(`https://${frankfurterUrl}/latest?amount=${numberOfComparation}&from=${firstToCompare}&to=${secondToCompare}`);
+            const allConversionInfo = await allConversionInfoRaw.json();
+            const filteredCurrencyAndNumber = await allConversionInfo.rates;
+            const convertedNumber = await filteredCurrencyAndNumber[secondToCompare];
+            const text = document.getElementById("text");
+            text.textContent = `${numberOfComparation} ${firstToCompare} is ${convertedNumber} ${secondToCompare}`;
+        }catch{
+            text.textContent = "There was an error, try again later";
+        };
     });
 });

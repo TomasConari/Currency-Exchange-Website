@@ -15,8 +15,34 @@ header{
     background: #fff;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
 }
+.label{
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #212529;
+    padding: 8px;
+    border-radius: 4px;
+}
 #content{
+    padding-top: 15%;
     border-bottom: solid #212529;
+}
+#calculatorContent{
+    display: flex;
+    flex-direction: column;
+    background-color: #fef8f5;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-bottom: solid #212529;
+}
+#firstBox{
+    display: flex;
+    flex-direction: row;
+}
+#secondBox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5%;
 }
 #tittle{
     font-size: 30px;
@@ -28,8 +54,8 @@ header{
 footer{
     display: flex;
     align-items: center;
-    background-color: #fef8f5;
-    
+    background-color: #fef8f5; 
+    padding-bottom: 0%;
 }
 #firstHalf{
     color: #7a6960;
@@ -58,7 +84,7 @@ a{
 .currentPage{
     color: #eb5d1e;
 }
-#toCalculator{
+#toCalculator, #convertButton{
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     background-color: #eb5d1e;
@@ -80,7 +106,6 @@ a{
     flex-direction: row;
 }
 #presentationBox{
-    padding-top: 15%;
     padding-bottom: 5%;
     display: flex;
     justify-content: center;
@@ -173,6 +198,24 @@ a{
     padding-top: 5%;
     padding-bottom: 5%;
     color: #4e4039;
+}
+#formBox{
+    padding-right: 10%;
+}
+#number,#firstDropdown,#secondDropdown,#convertButtonBox{
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#calculatorTittle{
+    text-align: left;
+    padding-left: 10%;
+}
+#result{
+    border: solid #4e4039;
+    transition: opacity 0.5s ease-in-out;
 }
 @keyframes fadeIn{
     from{
