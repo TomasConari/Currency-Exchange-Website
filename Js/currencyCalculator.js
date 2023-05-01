@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
+
     const frankfurterUrl = 'api.frankfurter.app';
     const getFrankfuterData = async (host) => {
         try{
@@ -10,20 +11,20 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         };
     };
     const keys = await getFrankfuterData(frankfurterUrl);
+
     const firstCurrency = document.getElementById("firstCurrency");
     const secondCurrency = document.getElementById("secondCurrency");
-    for(let i = 0; i < keys.length; i += 1){
-        const option = document.createElement("option");
-        option.text = keys[i];
-        option.value = keys[i];
-        firstCurrency.appendChild(option);
+    const fillDropdown = (keysArray, currentDropdown) => {
+        for(let i = 0; i < keysArray.length; i += 1){
+            const option = document.createElement("option");
+            option.text = keysArray[i];
+            option.value = keysArray[i];
+            currentDropdown.appendChild(option);
+        };
     };
-    for(let i = 0; i < keys.length; i += 1){
-        const option = document.createElement("option");
-        option.text = keys[i];
-        option.value = keys[i];
-        secondCurrency.appendChild(option);
-    };
+    fillDropdown(keys, firstCurrency);
+    fillDropdown(keys, secondCurrency);
+
     const convertButton = document.getElementById("convertButton");
     convertButton.addEventListener("click", async () => {
         try{
@@ -32,8 +33,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             const numberOfComparation = document.getElementById("moneyNumber").value;
             const allConversionInfoRaw = await fetch(`https://${frankfurterUrl}/latest?amount=${numberOfComparation}&from=${firstToCompare}&to=${secondToCompare}`);
             const allConversionInfo = await allConversionInfoRaw.json();
-            const filteredCurrencyAndNumber = await allConversionInfo.rates;
-            const convertedNumber = await filteredCurrencyAndNumber[secondToCompare];
+            const filteredCurrencyAndNumber = allConversionInfo.rates;
+            const convertedNumber = filteredCurrencyAndNumber[secondToCompare];
             const text = document.getElementById("text");
             text.textContent = `${numberOfComparation} ${firstToCompare} is ${convertedNumber} ${secondToCompare}`;
         }catch{
