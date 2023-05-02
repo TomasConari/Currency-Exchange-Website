@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Foreign Exchange</title>
-        <link rel="stylesheet" href="../css/style.css">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="../css/currencyCalculator.css">
         <script src="../Js/currencyCalculator.js"></script>
     </head>
     <body>
@@ -18,35 +18,37 @@
                 </p>
             </nav>
         </header>
-        <div id="calculatorContent">
-            <div id="firstBox">
-                <div id="calculatorTittle">
-                    <h3>Currency Calculator</h3>
+        <div id="content">
+            <div id="calculatorBox">
+                <div id="calculatorTextContainer">
+                    <h4 id="presentationTittle">Currency Calculator</h4>
+                    <h2 id="presentationText">
+                        Here you can compare and convert currencies.
+                    </h2>
                 </div>
                 <div id="formBox">
                     <div id="number">
                         <label for="moneyNumber" class="label">Money to convert </label>
-                        <input type="number" name="moneyNumber" id="moneyNumber" required min="0">
+                        <input type="number" name="moneyNumber" id="moneyNumber" class="input" placeholder="Number">
                     </div>
                     <div id="firstDropdown">
                         <label for="firstCurrency" class="label">Select the first Currency</label>
-                        <select id="firstCurrency" name="firstCurrency">
+                        <select id="firstCurrency" name="firstCurrency" class="input">
                         </select>
                     </div>
                     <div id="secondDropdown">
                         <label for="secondCurrency" class="label">Select the second Currency</label>
-                        <select id="secondCurrency" name="secondCurrency">
+                        <select id="secondCurrency" name="secondCurrency" class="input">
                         </select>
                     </div>
-                    <div id="convertButtonBox">
+                    <div id="buttonBox">
                         <button id="convertButton">Convert</button>
+                        <button id="compareButton">Compare</button>
                     </div>
                 </div>
             </div>
-            <div id="secondBox">
-                <div id="result">
-                    <h2 id="text"></h2>
-                </div>
+            <div id="result">
+                <h2 id="text"></h2>
             </div>
         </div>
         <footer>
