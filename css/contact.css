@@ -87,7 +87,7 @@ footer{
     width: 30%;
     margin-left: 10%;
 }
-#nameDiv,#lastnameDiv,#emailDiv{
+#nameDiv,#lastnameDiv,#countryDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
