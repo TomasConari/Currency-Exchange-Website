@@ -39,7 +39,7 @@ This proyect has 3 pages:
         -Contact Form:
             -Name.
             -Lastname.
-            Country.
+            -Country.
         -My Socials:
             -Email.
             -Github.
