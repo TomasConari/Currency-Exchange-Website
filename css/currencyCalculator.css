@@ -22,28 +22,6 @@ header{
     padding: 8px;
     border-radius: 4px;
 }
-#content{
-    padding-top: 15%;
-    border-bottom: solid #212529;
-}
-#calculatorContent{
-    display: flex;
-    flex-direction: column;
-    background-color: #fef8f5;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    border-bottom: solid #212529;
-}
-#firstBox{
-    display: flex;
-    flex-direction: row;
-}
-#secondBox{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 5%;
-}
 #tittle{
     font-size: 30px;
     margin-left: 30%;
@@ -54,8 +32,67 @@ header{
 footer{
     display: flex;
     align-items: center;
-    background-color: #fef8f5; 
+    background-color: #fff; 
     padding-bottom: 0%;
+}
+#content{
+    background-color: #fef8f5;
+    padding-top: 10%;
+    border-bottom: solid #212529;
+}
+#calculatorBox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #fef8f5;
+}
+#calculatorTextContainer{
+    padding-left: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#presentationTittle{
+    width: 80%;
+    margin: 0;
+    font-size: 280%;
+    letter-spacing: 5%;
+    color: #4e4039;
+}
+#presentationText{
+    width: 80%;
+    color: #a08f86;
+    margin: 15px 0 0 0;
+    font-weight: 500;
+    display: inline-block;
+}
+#formBox{
+    padding-right: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#result{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#text{
+    padding-top: 1%;
+    background-color: #fff;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    border-bottom: 3px solid #eb5d1e;
 }
 #firstHalf{
     color: #7a6960;
@@ -84,26 +121,33 @@ a{
 .currentPage{
     color: #eb5d1e;
 }
-#convertButton, #compareButton{
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    background-color: #eb5d1e;
+#convertButton{
+    background: #eb5d1e;
+    border: 0;
+    margin-right: 5%;
+    padding: 10px 24px;
     letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 3px;
-    margin-top: 30px;
-    position: initial;
-    color: #ffffff;
-    margin-left: 0%;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
 }
-#calculatorTittle{
-    text-align: center;
-    width: 70%;
-    margin: 0;
-    font-size: 280%;
-    letter-spacing: 5%;
-    color: #4e4039;
+#convertButton:hover{
+    background-color: #eb7d4d;
+    cursor: pointer;
+}
+#compareButton{
+    background: #eb5d1e;
+    border: 0;
+    margin-left: 5%;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+#compareButton:hover{
+    background-color: #eb7d4d;
+    cursor: pointer;
 }
 #fixed{
     position: fixed;
@@ -113,12 +157,45 @@ a{
     z-index: 1;
     height: 15%;
 }
-#number,#firstDropdown,#secondDropdown,#convertButtonBox{
+#number,#firstDropdown,#secondDropdown,#ButtonBox{
     display: flex;
+    width: 50%;
     align-content: center;
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 5%;
+}
+#number{
+    border-top: 3px solid #eb5d1e;
+    padding-top: 3%;
+}
+#moneyNumber, #firstCurrency, #secondCurrency{
+    text-align: center;
+}
+#ButtonBox{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #eb5d1e;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{ 
+    -moz-appearance:textfield; 
+}
+.input{
+    padding-left: 5%;
+    border: 1px solid #ced4da;
+    border-radius: 0%;
+    height: 44px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input:focus{
+    outline: none;
 }
 @keyframes fadeIn{
     from{
