@@ -3,7 +3,7 @@
     <head>
         <title>Contact</title>
         <link rel="stylesheet" href="../css/contact.css">
-        <script src="../Js/currencyCalculator.js"></script>
+        <script src="../Js/contact.js"></script>
     </head>
     <body>
         <header id="fixed">
@@ -25,16 +25,16 @@
             <div id="contactsBox">
                 <div id="formsBox">
                     <div id="nameDiv">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" autocomplete="off" placeholder="Your Name">
                     </div>
                     <div id="lastnameDiv">
-                    <label for="lastname"> Your Lastname</label>
-                        <input type="text" name="lastname" id="lastname">
+                        <input type="text" name="lastname" id="lastname" autocomplete="off" placeholder="Your Lastname">
                     </div>
-                    <div id="emailDiv">
-                        <label for="email"> Your Email</label>
-                        <input type="text" name="email" id="email">
+                    <div id="countryDiv">
+                        <input type="text" name="country" id="country" autocomplete="off" placeholder="Your Country">
+                    </div>
+                    <div id="buttonBox">
+                        <button id="submitButton">Submit</button>
                     </div>
                 </div>
                 <div id="socials">
@@ -79,7 +79,7 @@
                     Github
                 </a>
                 <a 
-                    id="github"
+                    id="linkedin"
                     class="navs"
                     target="_blank" 
                     href="https://www.linkedin.com/in/tomas-contreras-235854250/">
