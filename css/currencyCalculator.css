@@ -157,7 +157,7 @@ a{
     z-index: 1;
     height: 15%;
 }
-#number,#firstDropdown,#secondDropdown,#ButtonBox{
+#number,#firstDropdown,#secondDropdown,#buttonBox{
     display: flex;
     width: 50%;
     align-content: center;
@@ -173,7 +173,7 @@ a{
 #moneyNumber, #firstCurrency, #secondCurrency{
     text-align: center;
 }
-#ButtonBox{
+#buttonBox{
     display: flex;
     flex-direction: row;
     border-bottom: 3px solid #eb5d1e;
