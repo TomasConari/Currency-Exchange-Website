@@ -1,46 +1,44 @@
+# DOM-Website-secondModuleProject
+
 Website made with HTML, CSS and Javascript.
 
 How to see it?
-    1.Download/clone the repository.
-    2.Open "Index.html"
 
-This proyect has 3 pages:
+    1. Download/clone the repository.
+    2. Open "Index.html".
 
 
-  1.Index:
-  
+Proyect Info:
+
+    Each page has a Navbar to navigate trough the pages.
+
+    This proyect has 3 pages:
     
-    The page has an Index and a Nav bar where you can navigate trough the pages.
     
-    Topics:
+      1.Index:
     
-        -Presentation of the website.
+            -Presentation of the website.
+          
+      2.Currency Calculator:
+ 
+            -You can compare currency prices.
+          
+      3.Contact:
       
-      
-  2.Currency Calculator:
-  
+        Topics:
+        
+            -Contact Form:
+                -Name.
+                -Lastname.
+                -Country.
+                
+            -My Socials:
+                -Email.
+                -Github.
+                -LinkedIn.
 
-  
-    The page has a Nav bar where you can navigate trough the pages.
-    
-    Topics:
-    
-        -You can compare currency prices.
-      
-      
-  3.Contact:
-  
+My Links:
 
-  
-    The page has a Nav bar where you can navigate trough the pages.
-    
-    Topics:
-    
-        -Contact Form:
-            -Name.
-            -Lastname.
-            -Country.
-        -My Socials:
-            -Email.
-            -Github.
-            -LinkedIn.
+    -Linkedin: https://www.linkedin.com/in/tomascontreras1307/
+    -Github: https://github.com/TomasConari
+    -Email: tomasconari@gmail.com
