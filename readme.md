@@ -1,6 +1,7 @@
 # Currency Exchange Website
 
 Website made with HTML, CSS and Javascript.
+I used the Frankfurter API: https://www.frankfurter.app
 
 How to see it?
 
