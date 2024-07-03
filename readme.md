@@ -1,4 +1,4 @@
-# DOM-Website-secondModuleProject
+# DOM Website Second Module Project
 
 Website made with HTML, CSS and Javascript.
 
