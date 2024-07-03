@@ -1,4 +1,4 @@
-# DOM Website Second Module Project
+# Currency Exchange Website
 
 Website made with HTML, CSS and Javascript.
 
