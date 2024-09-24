@@ -7,47 +7,56 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("presentationTittle");
     const subTitle = document.getElementById("presentationText");
 
-    // Inicializar EmailJS con la clave pública
-    emailjs.init("CheDvvyarhhvgKfRt");  // Asegúrate de poner tu clave pública correcta
+    // Initialize EmailJS with the public key
+    emailjs.init("CheDvvyarhhvgKfRt");  // Make sure to put your correct public key
 
-    // Obtener el botón de envío
+    // Get the submit button
     const submitButton = document.getElementById("submitButton");
 
-    // Función para enviar el correo
+    // Function to send the email
     const sendEmail = async (e) => {
-        e.preventDefault();  // Prevenir la recarga de la página
+        e.preventDefault();  // Prevent the page from reloading
 
-        // Obtener los valores del formulario
-        const name = document.getElementById("name").value;
-        const lastname = document.getElementById("lastname").value;
-        const country = document.getElementById("country").value;
-        const email = document.getElementById("email").value;
+        // Get the values from the form
+        const name = document.getElementById("name");
+        const lastname = document.getElementById("lastname");
+        const country = document.getElementById("country");
+        const email = document.getElementById("email");
 
-        // Parámetros a enviar al servicio EmailJS
+        // Parameters to send to the EmailJS service
         const templateParams = {
-            name: name,
-            lastname: lastname,
-            country: country,
-            email: email,
+            name: name.value,
+            lastname: lastname.value,
+            country: country.value,
+            email: email.value,
         };
 
         try {
             const result = await emailjs.send('service_7j42v0n', 'template_cwbrvvn', templateParams);
             console.log(result);
-            title.textContent = "Email Sended";
-            subTitle.textContent = "";
-            await wait(5000);
-            title.textContent = "Contact";
-            subTitle.textContent = "Fill and Submit the form";
+            if (result.text === "OK") {
+                // Clear the input values
+                name.value = "";
+                lastname.value = "";
+                country.value = "";
+                email.value = "";
+                title.textContent = "Email Sent"; // Changed to "Email Sent"
+                subTitle.textContent = "";
+                await wait(5000);
+                title.textContent = "Contact"; // Changed to "Contact"
+                subTitle.textContent = "Fill and Submit the form"; // Return message
+            } else {
+                throw new Error('Error sending the email');
+            }
         } catch (error) {
             title.textContent = "Error";
             subTitle.textContent = "Try Again Later";
             await wait(5000);
-            title.textContent = "Contact";
-            subTitle.textContent = "Fill and Submit the form";
-        };
+            title.textContent = "Contact"; // Changed to "Contact"
+            subTitle.textContent = "Fill and Submit the form"; // Return message
+        }
     };
 
-    // Asignar la función de envío al botón de envío
+    // Assign the send function to the submit button
     submitButton.addEventListener("click", sendEmail);
 });

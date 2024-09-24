@@ -25,12 +25,12 @@ header{
 }
 #content{
     background-color: #fef8f5;
-    padding-top: 15%;
+    padding-top: 10%;
     border-bottom: solid #212529;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-bottom: 12%;
+    padding-bottom: 5%;
 }
 #tittle{
     font-size: 30px;
