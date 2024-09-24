@@ -3,7 +3,8 @@
     <head>
         <title>Contact</title>
         <link rel="stylesheet" href="../css/contact.css">
-        <script src="../Js/contact.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="module" src="../js/contact.js"></script>
     </head>
     <body>
         <header id="fixed">
@@ -19,20 +20,23 @@
             </nav>
         </header>
         <div id="content">
-            <div id="formContainer">
+            <form id="sendForm">
                 <div id="nameDiv">
-                    <input type="text" class="input" name="name" id="name" autocomplete="off" placeholder="Your Name">
+                    <input type="text" class="input" name="name" id="name" autocomplete="off" placeholder="Your Name" required>
                 </div>
                 <div id="lastnameDiv">
-                    <input type="text" class="input" name="lastname" id="lastname" autocomplete="off" placeholder="Your Lastname">
+                    <input type="text" class="input" name="lastname" id="lastname" autocomplete="off" placeholder="Your Lastname" required>
                 </div>
                 <div id="countryDiv">
-                    <input type="text" class="input" name="country" id="country" autocomplete="off" placeholder="Your Country">
+                    <input type="text" class="input" name="country" id="country" autocomplete="off" placeholder="Your Country" required>
+                </div>
+                <div id="emailDiv">
+                    <input type="text" class="input" name="email" id="email" autocomplete="off" placeholder="Your Email" required>
                 </div>
                 <div id="buttonBox">
                     <button id="submitButton">Submit</button>
                 </div>
-            </div>
+            </form>
             <div id="textContainer">
                 <h4 id="presentationTittle">Contact</h4>
                 <h2 id="presentationText">Fill and Submit the form</h2>

@@ -74,7 +74,7 @@ header{
 .input:focus{
     outline: none;
 }
-#formContainer{
+form{
     padding-left: 10%;
     width: 50%;
     display: flex;
@@ -82,7 +82,7 @@ header{
     align-items: center;
     justify-content: center;
 }
-#nameDiv,#lastnameDiv,#countryDiv,#buttonBox{
+#nameDiv,#lastnameDiv,#countryDiv,#emailDiv,#buttonBox{
     display: flex;
     width: 50%;
     align-content: center;
@@ -100,7 +100,7 @@ header{
     border-radius: 4px;
     transition: background-color 0.3s ease-in-out;
 }
-#name,#lastname,#country{
+#name,#lastname,#country, #email{
     text-align: center;
 }
 #submitButton:hover{
